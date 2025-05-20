@@ -57,17 +57,17 @@ var c bool
 A condition can be either true or false.
 Go supports the usual comparison operators from mathematics:
 
-- < — Less than
+- < Less than
 
-- <= — Less than or equal
+- <= Less than or equal
 
-- > — Greater than
+- `> ` Greater than
 
-- > = — Greater than or equal
+- `> =` Greater than or equal
 
-- == — Equal to
+- == Equal to
 
-- != — Not equal to
+- != Not equal to
 
 Additionally, Go supports common logical operators:
 
@@ -138,3 +138,36 @@ Examples:
    	    fmt.Println("Adult")
        }
    ```
+
+## Go Functions
+
+- A function is a block of statements that can be used repeatedly in a program.
+
+- A function will not execute automatically when a page loads.
+
+- A function will be executed by a call to the function.
+
+Example
+
+```golang
+package main
+
+import "fmt"
+
+// function without return
+func add(num1 int, num2 int) {
+	sum := num1 + num2
+	fmt.Println(sum)
+}
+// function with return
+func calculateSum(n1 int, n2 int) int {
+	return n1 + n2
+}
+func main() {
+	num1 := 5
+	num2 := 10
+	add(num1, num2)
+	sum := calculateSum(num1,num2)
+	fmt.Println(sum)
+}
+```
