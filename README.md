@@ -51,3 +51,90 @@ var a int
 var b string
 var c bool
 ```
+
+## Conditions
+
+A condition can be either true or false.
+Go supports the usual comparison operators from mathematics:
+
+- < — Less than
+
+- <= — Less than or equal
+
+- > — Greater than
+
+- > = — Greater than or equal
+
+- == — Equal to
+
+- != — Not equal to
+
+Additionally, Go supports common logical operators:
+
+- && — Logical AND
+
+- || — Logical OR
+
+- ! — Logical NOT
+
+We can use these operators — alone or combined — to create conditions for decision-making.
+Example
+
+```golang
+x > y
+x != y
+(x > y) && (y > z)
+(x == y) || z
+
+```
+
+### Go Conditional Statements
+
+Go provides the following conditional statements:
+
+- `if` — Specifies a block of code to run if a condition is true.
+
+- `else` — Specifies a block of code to run if the same condition is false.
+
+- `else if` — Specifies a new condition to test if the first condition is false.
+
+- `switch` — Allows selection among multiple possible code blocks.
+
+Examples:
+
+1. if-else
+
+   ```go
+   package main
+
+   import "fmt"
+
+   func main() {
+       score := 85
+       if score >= 90 {
+   	    fmt.Println("Grade: A")
+       } else if score >= 80 {
+   	    fmt.Println("Grade: B")
+       } else {
+   	    fmt.Println("Grade: C or lower")
+       }
+   }
+   ```
+
+2. Switch
+
+   ```go
+   package main
+   import "fmt"
+
+   func main() {
+       age := 12
+       switch {
+       case age < 13:
+   	    fmt.Println("Child")
+       case age < 18:
+   	    fmt.Println("Teen")
+       default:
+   	    fmt.Println("Adult")
+       }
+   ```
