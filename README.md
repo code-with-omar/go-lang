@@ -246,3 +246,34 @@ func main() {
 	goodbyeMessage()
 }
 ```
+
+We're comparing two versions of a Go program that does the same task—taking a user's name and two numbers, calculating the sum, and displaying the results. Let's compare them:
+
+#### Version 1: Monolithic Style
+
+- Everything is written directly inside the main() function.
+
+#### Version 2: Modular/Functional Style
+
+The logic is broken into small, reusable functions:
+
+```golang
+func main() {
+    welcome()
+    name := userName()
+    num1, num2 := getNumbers()
+    sum := calculationSum(num1,num2)
+    displayResult(name,sum)
+    goodbyeMessage()
+}
+
+```
+
+Version 2 (Modular style) is better in terms of software engineering practices.
+| Criteria | Monolithic (Version 1) | Modular (Version 2) |
+| ------------------- | -------------------------------------------- | ------------------------------------------------------------- |
+| **Readability** | All logic in one place — can get messy | Easier to read, each function has a clear purpose |
+| **Reusability** | Hard to reuse logic | Easy to reuse logic (e.g., `getNumbers()`, `displayResult()`) |
+| **Testability** | Difficult to write unit tests | Each function can be independently tested |
+| **Maintainability** | Any change requires modifying the main block | Functions can be modified or improved independently |
+| **Scalability** | Difficult to manage as the program grows | Easy to extend and manage as functionality increases |
